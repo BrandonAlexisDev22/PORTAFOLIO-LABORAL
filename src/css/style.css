@@ -1,0 +1,360 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+
+.header {
+    width: 100%;
+    min-height: 80px; /* Altura mínima para que no se encoja demasiado */
+    padding: 10px 0; /* Espaciado superior e inferior */
+}
+
+@media (max-width: 768px) {
+    .header {
+        min-height: auto; /* Permite que la navbar se expanda si es necesario */
+        padding: 15px 0; /* Mayor espaciado para mejorar visibilidad */
+    }
+}
+
+.container-img {
+    max-width: 120px; /* Tamaño más manejable */
+    height: auto; /* Mantiene proporción */
+}
+
+/* Ajuste en móviles */
+@media (max-width: 768px) {
+    .container-img {
+        max-width: 100px; /* Reduce el tamaño en pantallas pequeñas */
+    }
+}
+
+.logo-menu {
+    height: 100px; /* Tamaño dentro del menú */
+    width: auto;
+    display: block;
+    margin: 0 auto; /* Centrado */
+}
+
+.nav-item > .nav-link {
+    position: relative;
+}
+
+.nav-item > .nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #b47dcd, #e878a2, #eb85ab);
+    z-index: 1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+}
+
+.nav-item > .nav-link:hover::before {
+    transform: scaleX(1);
+}
+
+.nav-item > .nav-link:hover {
+    font-weight: bold;
+}
+
+.hero .hero-container {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    background-image: url('../img/blurry-gradient-haikei.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.text-page {
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: bold;
+    color: #ae3ee2;
+}
+
+.h1-hero {
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+    -webkit-text-stroke: 3px black; /* Ancho y color del contorno */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra suave */
+}
+
+.text-description{
+    text-align: center;
+    font-size: 23px;
+    word-wrap: break-word;
+}
+
+.button-about-me {
+    text-decoration: none;
+    color:white;
+    padding: 15px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #ae3ee2;
+    .bi-arrow-right-circle-fill {
+        font-size: 20px;
+    }
+    transition: background-color 0.3s ease;
+}
+
+.button-about-me:hover {
+    background-color: #56296b;
+}
+
+.content-services{
+    margin-top: 30px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 120px;
+}
+
+.container-cards{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr auto;
+    gap: 60px;
+
+}
+
+.card-container{
+    border: 4px solid #e878a2;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    background: rgb(180,125,205);
+background: radial-gradient(circle, rgba(180,125,205,1) 0%, rgba(232,120,162,1) 35%, rgba(235,133,171,1) 100%);
+}
+
+.bi-icon {
+    position: relative;
+    top: 15px;
+    color: white;
+    font-size: 60px;
+    background-color: #ae3ee2;
+    padding: 10px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+}
+
+.description-service {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    -webkit-text-stroke: 1px black; /* Ancho y color del contorno */
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3); /* Sombra suave */
+}
+
+.container-about-me {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../img/blurry-gradient-haikei.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    gap: 180px;
+}
+
+.section-card {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.section-card > * {
+    position: relative;
+    left: 20px;
+}
+
+.text-job{
+    font-size: 40px;
+}
+
+.read-more {
+    width: 60%;
+}
+
+.photo-container{
+    border: 3px dashed #ae3ee2;
+    position: relative;
+    width: 500px; /* Ajusta el ancho según sea necesario */
+    height: 70%;
+    border-radius: 300px;
+    background-image: url('../img/marcela.jpeg');
+    background-position: center;
+}
+
+/* Estilos para el contenedor principal de la experiencia */
+.container-experiencie {
+  background-color: #f9f9f9; /* Fondo claro */
+  padding: 4rem 2rem; /* Espaciado interno */
+  text-align: center; /* Centrar el contenido */
+}
+
+.container-content {
+  max-width: 1200px; /* Ancho máximo del contenido */
+  margin: 0 auto; /* Centrar el contenedor */
+}
+
+.container-title {
+  margin-bottom: 3rem; /* Espaciado inferior */
+}
+
+.container-title h3 {
+  font-size: 2.5rem; /* Tamaño del título */
+  color: #333; /* Color del texto */
+  margin-bottom: 1rem; /* Espaciado inferior */
+}
+
+.container-title .lead {
+  font-size: 1.2rem; /* Tamaño del subtítulo */
+  color: #666; /* Color del texto */
+}
+
+/* Estilos para las tarjetas de experiencia */
+.container-experience {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas de igual tamaño */
+    gap: 2rem; /* Espacio entre tarjetas */
+  }
+
+.card-experiencie {
+  background-color: #fff; /* Fondo blanco */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  overflow: hidden; /* Evitar desbordamiento */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+  width: 100%;
+}
+
+.card-experiencie:hover {
+  transform: translateY(-10px); /* Efecto de levantar */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+.description-job {
+  padding: 1.5rem; /* Espaciado interno */
+  text-align: left; /* Alinear texto a la izquierda */
+}
+
+.description-job h4 {
+  font-size: 1.5rem; /* Tamaño del título */
+  color: #333; /* Color del texto */
+  margin-bottom: 1rem; /* Espaciado inferior */
+}
+
+.description-job .lead {
+  font-size: 1rem; /* Tamaño del texto */
+  color: #666; /* Color del texto */
+  line-height: 1.6; /* Altura de línea */
+}
+
+.img-container {
+    width: 100%;
+    height: 200px; /* Altura fija */
+    display: flex; /* Activar Flexbox */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    overflow: hidden; /* Evitar desbordamiento */
+  }
+  
+  .img-container img {
+    max-width: 100%; /* Asegurar que la imagen no exceda el contenedor */
+    max-height: 100%; /* Asegurar que la imagen no exceda el contenedor */
+    object-fit: contain; /* Ajustar la imagen sin recortarla */
+  }
+
+.container-phrase{
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    height: 50% ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Estilos generales del footer */
+.footer {
+    background-color: #e878a2; /* Color de fondo oscuro */
+    color: #ecf0f1; /* Color de texto claro */
+    padding: 40px 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Contenedor del logo */
+  .container-img-logo img {
+    max-width: 150px; /* Ajusta el tamaño del logo */
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  /* Contenedor de redes sociales */
+  .container-media {
+    margin-bottom: 20px;
+  }
+  
+  /* Lista de enlaces sociales */
+  .links-social {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre enlaces */
+  }
+  
+  .links-social li {
+    display: inline-block;
+  }
+  
+  .links-social a {
+    color: #ecf0f1; /* Color de texto claro */
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .links-social a:hover {
+    color: #ae3ee2; /* Color azul al pasar el mouse */
+  }
+
